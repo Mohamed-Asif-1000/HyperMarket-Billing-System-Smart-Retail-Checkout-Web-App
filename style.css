@@ -1,0 +1,545 @@
+/*   Body Base Styles */
+body{
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #0f172a;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Header Section Styles */
+.header-container{
+    display: flex;
+    gap: 30px;
+    background-color: #111827;
+    border: 1px solid #ffffff8e;
+    border-radius: 10px;
+    width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.logo-container{
+    padding: 20px;
+}
+.logo-container img{
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+.logo-container .logo-text{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+.logo-container p{
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid #1f2937;
+    background-color: #0b1220;
+    border-radius: 10px;
+    color: #9899a7;
+}
+
+/* Cashier Dropdown Styles */
+.cashier-label {
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: 8px;
+  color: #ffffffce;
+  font-weight: 600;
+}
+.cashier-select {
+  height: 36px;
+  border-radius: 8px;
+  background-color: #091429;
+  color:#ffffffce;
+  border: none;
+  outline: 1px solid #ffffff8e;
+  padding: 6px 10px;
+  font-weight: 600;
+}
+
+/* Seller Information Box */
+.seller-info {
+  margin-top: 8px;
+  color: #bcd;
+  padding: 8px;
+  background: #07111a;
+  border-radius: 8px;
+  width: 400px;
+  border: 1px solid #1f2937;
+}
+
+/* Navigation Section (Date, Time, Bill No) */
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-end;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+}
+.nav-container > div {
+    width: 250px;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid #1f2937;
+    background-color: #0b1220;
+    border-radius: 10px;
+    color: #9899a7;
+}
+/*   Search and Seller Selection Section */
+.content-2{
+    border: 1px solid #ffffff8e;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 1300px;
+    height: auto;
+    background-color: #111827;
+    margin-bottom: 30px;
+}
+.content-2 .form-container form{
+    padding: 20px;
+}
+.content-2 .form-container form .search{
+    width: 500px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #0b1220;
+    color: #ffffffce;
+    border: none;
+    outline: 1px solid #ffffff8e;
+    margin-right: 20px;
+}
+.content-2 .form-container form .search::placeholder{
+    color: #ffffffce;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content-2 .form-container form .search-button{
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    background-color: #091429;
+    color:#ffffffce ;
+    border: none;
+    cursor: pointer;
+    outline: 1px solid #ffffff8e;
+}
+.content-2 .form-container form .seller{
+    padding: 20px;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ffffffce;
+}
+.content-2 .form-container form select{
+    width: 400px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    background-color: #091429;
+    color:#ffffffce ;
+    border: none;
+    cursor: pointer;
+    outline: 1px solid #ffffff8e;
+}
+
+/*  Main Content Layout (Products + Table + Totals) */
+.content-3{
+    display: flex;
+    gap: 30px;
+}
+
+/* Product Cards Grid Section */
+.content-3 .products-container{
+    width: 20%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #ffffff8e;
+    border-radius: 10px;
+    background-color: #111827;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.content-3 .products-grid{
+    border: 1px solid #ffffffce;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #0b1220;
+    cursor: pointer;
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content-3 .products-container p{
+    color: #22d3ee;
+}
+.content-3 .products-container .price{
+    color: rgb(253, 70, 3);
+    font-weight: bold;
+}
+
+/*  Bill Items Table Section */
+.content-3 .products-table{
+    width: 70%;
+    border: 1px solid #ffffff8e;
+    border-radius: 10px;
+    background-color: #0b1220;
+    padding: 10px;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.content-3 .products-table table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 13px;
+}
+.content-3 .products-table table thead th{
+    text-align: left;
+    color: #22d3ee;
+    position: sticky;
+    top: 0;
+    background: #0b1220;
+    z-index: 3;
+    padding: 8px;
+}
+.content-3 .products-table table tr td, .content-3 .products-table table tr th{
+    border-bottom: 1px dashed #ffffff8e;
+    padding: 8px;
+    vertical-align: middle;
+}
+.content-3 .products-table .table-heading{
+    text-align: center;
+    color:rgba(255, 255, 255, 0.705);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.content-3 .products-table table .btn{
+    border-radius: 50px;
+    background-color: #080931;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.content-3 .products-table table .remove-btn {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background-color: #080931;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.content-3 .products-table table .remove-btn:hover {
+    background-color: #070988;
+}
+/*  Quantity Column Styles */
+td.qty {
+  height: 100%;
+  vertical-align: middle !important;
+  text-align: center;
+  white-space: nowrap;
+  padding: 8px;
+}
+td.qty .qty-controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+td.qty .qty-controls button.btn {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  background-color: #05122b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+td.qty .qty-controls span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+/* Totals & Payment Summary Section */
+.content-3 .total-container{
+    width: 25%;
+    border: 1px solid #ffffff8e;
+    background-color: #0b1220;
+    border-radius: 10px;
+    padding: 20px;
+}
+.content-3 .total-container h4{
+    color: #9899a7;
+}
+.content-3 .total-container .div-1{
+    border-bottom: 1px dashed #9899a7;
+    margin-bottom: 20px;
+}
+.content-3 .total-container .div-2{
+    border-bottom: 1px dashed #9899a7;
+}
+.content-3 .total-container .div-2 .payment{
+    width: 60px;
+    height: 30px;
+    background-color: #0f1e3f;
+    border: none;
+    outline: 1px solid grey;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.content-3 .total-container .div-2 .payment.selected {
+  background-color: #22d3ee;
+  color: black;
+  font-weight: bold;
+}
+.content-3 .total-container .div-3{
+    padding: 20px 0px ;
+    line-height: 40px;
+    font-size: 16px;
+    border-bottom: 1px dashed #9899a7;
+}
+.content-3 .total-container .div-4-grid{
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    border-bottom: 1px dashed #9899a7;
+}
+.content-3 .total-container .div-4-heading{
+    font-size: 24px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500px;
+    color: white;
+    padding: 20px 0px;
+}
+.content-3 .total-container .div-4 button{
+    width: 70;
+    height: 50px;
+    background-color: #0f1e3f;
+    border: none;
+    outline: 1px solid grey;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/*  Discount & Input Field Styles */
+.discount-input {
+  width: 60px;
+  height: 25px;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 14px;
+  background-color: #0b1220;
+  color: #ffffffce;
+  border: 1px solid #1f2937;
+  outline: none;
+}
+.discount-input:focus {
+  border-color: #22d3ee;
+}
+
+/* Amount Received Input */
+#amount-received {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 15px;
+  background-color: #0b1220;
+  color: #ffffffce;
+  border: 1px solid #1f2937;
+  outline: none;
+  margin-left: 10px;
+}
+#amount-received:focus {
+  border-color: #22d3ee;
+}
+
+/* Print Bill Styles */
+.card{
+    display: none;
+}
+
+/*  Stock Modal Window */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: #111827;
+  padding: 30px;
+  border: 1px solid #ffffff8e;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/*  Print Page Media Rules */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-area, #print-area * {
+    visibility: visible;
+  }
+  #print-area {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .card {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    color: black;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/* Responsive Adjustments */
+
+/* For max-width: 1350px */
+@media (max-width: 1350px) {
+  .header-container, .content-2, .content-3 {
+    width: 95%;
+    max-width: 1300px;
+  }
+  .content-2 .form-container form .search {
+    width: 300px;
+  }
+  .content-2 .form-container form select {
+    width: 250px;
+  }
+}
+
+/* For max-width: 1200px */
+
+@media (max-width: 1200px) {
+  .content-3 {
+    flex-direction: column;
+  }
+  .content-3 .products-container,
+  .content-3 .products-table,
+  .content-3 .total-container {
+    width: 100%;
+  }
+  .content-3 .products-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .content-3 .products-table {
+    max-height: 400px;
+  }
+}
+
+/* For max-width: 768px */
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+  .nav-container {
+    align-items: center;
+    padding: 10px;
+    width: max-content;
+  }
+  .nav-container > div {
+    width: 100%;
+    text-align: center;
+  }
+  .content-2 .form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+  }
+  .content-2 .form-container form .search {
+    width: 100%;
+    margin-right: 0;
+  }
+  .content-2 .form-container form .search-button,
+  .content-2 .form-container form select {
+    width: 100%;
+  }
+  .content-3 .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .content-3 .products-table {
+    max-height: 350px;
+  }
+}
+
+/* For max-width: 480px */
+
+@media (max-width: 480px) {
+  .content-3 .products-container {
+    grid-template-columns: 1fr;
+  }
+  .content-3 .products-table {
+    max-height: 300px;
+  }
+}

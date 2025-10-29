@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HyperMarket</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo4.png" />
+
+</head>
+<body>
+    <!--  HEADER SECTION (Logo, Cashier, Date/Time, Bill No) -->
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/logo4.png" alt="Shop Logo" />
+        <h1 class="logo-text">FRIDAY HYPERMARKET</h1>
+
+        <!-- CASHIER DROPDOWN -->
+        <label for="cashierSelect" class="cashier-label">Cashier :</label>
+        <select id="cashierSelect" class="cashier-select">
+          <option>David John</option>
+          <option>Rajeev</option>
+          <option>Jaleel</option>
+          <option>Ajay Rana</option>
+        </select>
+      </div>
+       <!-- NAVIGATION AREA (Date, Time, Bill Number) -->
+      <nav class="nav-container">
+        <div class="date">Date :</div>
+        <div class="time">Time :</div>
+        <div class="bill-no">Bill No :</div>
+      </nav>
+    </div>
+  </header>
+  <!-- SEARCH & SELLER DETAILS SECTION -->
+  <section class="content-2">
+    <div class="form-container">
+      <form id="searchForm">
+        <input
+          type="search"
+          name="search"
+          class="search"
+          id="search"
+          placeholder="Search Product Here"
+        />
+        <button type="submit" class="search-button" id="searchbutton">
+          Search
+        </button>
+        <!-- SELLER SELECTION DROPDOWN -->
+        <label class="seller">Seller Details :</label>
+        <select id="sellerSelect">
+          <option value="agro">Agro Farm Limited, Thrippunithara</option>
+          <option value="pythrika">Pythrika foods and snacks, Malappuram</option>
+          <option value="skybird">SkyBird Chocolate Factory, Coimbatore</option>
+          <option value="tenshen">Tenshen Toys Ltd</option>
+        </select>
+
+        <!-- DISPLAY SELECTED SELLER INFORMATION -->
+        <div id="sellerInfo" class="seller-info">Select a seller to view contact & address.</div>
+      </form>
+    </div>
+</section>
+<!-- MAIN CONTENT AREA (Products, Bill Table, Totals)-->
+  <section class="content-3">
+    <!-- PRODUCT GRID SECTION -->
+    <div class="products-container">
+      <div class="products-grid">
+        <p class="product-id">PDT-FRT01</p>
+        <h3>Kashmir Apple (Kg)</h3>
+        <p class="price">₹ 150.00</p>
+      </div>
+      <div class="products-grid">
+        <p class="product-id">PDT-RCE02</p>
+        <h3>Basmathi Rice (Kg)</h3>
+        <p class="price">₹ 120.00</p>
+      </div>
+      <div class="products-grid">
+        <p class="product-id">PDT-BRD03</p>
+        <h3>Wheat Bread (Per 500g)</h3>
+        <p class="price">₹ 88.00</p>
+      </div>
+      <div class="products-grid">
+        <p class="product-id">PDT-MLK04</p>
+        <h3>Toned Milk (1L)</h3>
+        <p class="price">₹ 105.00</p>
+      </div>
+      <div class="products-grid">
+        <p class="product-id">PDT-SMP05</p>
+        <h3>Hair Shampoo (300ml)</h3>
+        <p class="price">₹ 165.00</p>
+      </div>
+      <div class="products-grid">
+        <p class="product-id">PDT-OIL06</p>
+        <h3>COCOMPIRE Virgin Coconut Oil (1L)</h3>
+        <p class="price">₹ 600.00</p>
+      </div>
+      <div class="products-grid">
+        <p class="product-id">PDT-EGG07</p>
+        <h3>Farm Egg (10pc)</h3>
+        <p class="price">₹ 100.00</p>
+      </div>
+      <div class="products-grid">
+        <p class="product-id">PDT-SBAR08</p>
+        <h3>Detergent Soap Bar (4pc)</h3>
+        <p class="price">₹ 125.00</p>
+      </div>
+    </div>
+    <!-- BILL ITEMS TABLE SECTION -->
+    <div class="products-table">
+      <div class="table-heading">Bill Items</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Tax (5%)</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <!-- TOTALS / PAYMENT SUMMARY SECTION -->
+    <div class="total-container">
+      <div class="div-1">
+        <h2>Payment Summary</h2>
+        <h4>Sub Total : ₹ 0.00</h4>
+        <h4>Total : ₹ 0.00</h4>
+        <h4>Discount : ₹ 0.00</h4>
+        <h4>Tax Amount : ₹ 0.00</h4>
+        <h3>Grand Total : ₹ 0.00</h3>
+      </div>
+      <!-- PAYMENT MODE BUTTONS -->
+      <div class="div-2">
+        <button type="button" class="payment">Cash</button>
+        <button type="button" class="payment">UPI</button>
+        <button type="button" class="payment">Wallet</button>
+        <button type="button" class="payment">Card</button>
+      </div>
+      <!-- AMOUNT RECEIVED & CHANGE -->
+      <div class="div-3">
+        <div>Amount Received : ₹ <input type="number" id="amount-received" placeholder="0" /></div>
+        <div>Change Due : <span id="change-due">₹ 0.00</span></div>
+      </div>
+      <!-- BILL ACTION BUTTONS -->
+      <div class="div-4">
+        <div class="div-4-heading">Bill Printing</div>
+        <div class="div-4-grid">
+          <button type="button" class="print-bill">Print</button>
+          <button type="button" class="mail-bill">E-mail Bill</button>
+          <button type="button" class="delivery">Home Delivery</button>
+          <button type="button" class="stock">Stock</button>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--  PRINT BILL TEMPLATE SECTION -->
+  <div id="print-area">
+    <div class="card">
+      <h2 class="text-center">FRIDAY HYPERMARKET</h2>
+      <p class="text-center">Avenida Street, Kochi - 682017</p>
+      <p class="text-center">Phone: +91 9876543210</p>
+      <hr />
+      <div class="bill-details">
+        <p><strong>Bill No:</strong> <span class="print-bill-no"></span></p>
+        <p><strong>Date:</strong> <span class="print-date"></span></p>
+        <p><strong>Time:</strong> <span class="print-time"></span></p>
+        <p><strong>Cashier:</strong> <span class="print-cashier"></span></p>
+        <p><strong>Payment Mode:</strong> <span class="print-payment-mode">N/A</span></p>
+      </div>
+      <hr />
+      <table class="bill-table" cellspacing="0" cellpadding="5" width="100%">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Disc</th>
+            <th>Tax</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <hr />
+      <div class="summary-details">
+        <p><strong>Total:</strong> <span class="print-total"></span></p>
+        <p><strong>Discount:</strong> <span class="print-discount"></span></p>
+        <p><strong>Tax:</strong> <span class="print-tax"></span></p>
+        <h3><strong>Grand Total:</strong> <span class="print-grand-total"></span></h3>
+        <p><strong>Amount Received:</strong> <span class="print-received"></span></p>
+        <p><strong>Change Due:</strong> <span class="print-change"></span></p>
+      </div>
+      <hr />
+      <p class="text-center">Thank you for shopping with us!</p>
+    </div>
+  </div>
+<!-- STOCK MODAL SECTION -->
+  <div id="stockModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Available Stock</h2>
+      <ul id="stockList"></ul>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
